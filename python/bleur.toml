@@ -32,7 +32,7 @@ message = "Who's going to be author?"
 
 [[variable]]
 variable = "website"
-default = "https://bleur.net"
+default = "https://bleur.uz"
 message = "Is there any website hosted for this project?"
 
 [[variable]]

@@ -15,7 +15,7 @@ message = "What would be initial version?"
 
 [[variable]]
 variable = "website"
-default = "https://bleur.net"
+default = "https://bleur.uz"
 message = "Is there any website hosted for this project?"
 
 [[variable]]
