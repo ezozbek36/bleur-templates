@@ -8,7 +8,7 @@ welcome = """
 The intended usage of this flake is to write a project on Rust which compiles to an executable project
 
 ## Important
-Please, after bootstrapping your own project, don't forget to read readme.md for more infomration on usage.
+Please, after bootstrapping your own project, don't forget to read readme.md for more information on usage.
 
 ## More info
 - [Rust language](https://rust-lang.org)
@@ -25,7 +25,7 @@ welcome = """
 The intended usage of this flake is to write a project on nightly version of Rust toolchain which compiles to an executable project
 
 ## Important
-Please, after bootstrapping your own project, don't forget to read readme.md for more infomration on usage.
+Please, after bootstrapping your own project, don't forget to read readme.md for more information on usage.
 
 ## More info
 - [Fenix for Nix](https://github.com/nix-community/fenix)
@@ -43,7 +43,7 @@ welcome = """
 The intended usage of this flake is to write a C static/shared library with libc on Rust
 
 ## Important
-Please, after bootstrapping your own project, don't forget to read readme.md for more infomration on usage.
+Please, after bootstrapping your own project, don't forget to read readme.md for more information on usage.
 
 ## More info
 - [Libc-rs](https://docs.rs/libc/latest/libc/)
@@ -61,7 +61,7 @@ welcome = """
 The intended usage of this flake is to write a backend server application on Rust/Actix and deploy it on NixOS server
 
 ## Important
-Please, after bootstrapping your own project, don't forget to read readme.md for more infomration on usage.
+Please, after bootstrapping your own project, don't forget to read readme.md for more information on usage.
 
 ## More info
 - [Actix.rs](https://actix.rs)
@@ -91,6 +91,47 @@ for details on project structure, environment variables, and Docker workflows.
 - Docker: https://www.docker.com
 """
 
+[templates.rust-relm4]
+path = "./rust-relm4"
+description = "Relm4 GTK application"
+welcome = """
+# Bleur stack Gnome GTK based Relm4 stack application on Nix template
+
+## Intended usage
+This template is intended for building full-featured GNOME desktop applications with
+Relm4 in Rust, with Nix providing a reproducible development and packaging workflow.
+
+## Important
+Please, after bootstrapping your own project, don't forget to read readme.md for more information on usage.
+
+## More info
+- [GTK](https://www.gtk.org/)
+- [Relm4](https://relm4.org/)
+- [Rust language](https://rust-lang.org)
+- [Rust NixOS Wiki](https://nixos.wiki/wiki/Rust)
+- [Crane](https://crane.dev/getting-started.html)
+"""
+
+[templates.rust-relm4-minimal]
+path = "./rust-relm4-minimal"
+description = "Minimal Relm4 GTK application"
+welcome = """
+# Bleur stack Gnome GTK based Relm4 stack application on Nix template
+
+## Intended usage
+This template is intended for small, learning-focused GNOME GTK applications built with Relm4 in Rust,
+giving you a lightweight starting point that is easy to extend.
+
+## Important
+Please, after bootstrapping your own project, don't forget to read readme.md for more information on usage.
+
+## More info
+- [GTK](https://www.gtk.org/)
+- [Relm4](https://relm4.org/)
+- [Rust language](https://rust-lang.org)
+- [Rust NixOS Wiki](https://nixos.wiki/wiki/Rust)
+"""
+
 [templates.rust-telegram]
 path = "./rust-telegram"
 description = "Rust + Nix template for Telegram-bots"
@@ -100,7 +141,7 @@ welcome = """
 The intended usage of this flake is to write a Telegram bot on Rust and deploy it on NixOS server
 
 ## Important
-Please, after bootstrapping your own project, don't forget to read readme.md for more infomration on usage.
+Please, after bootstrapping your own project, don't forget to read readme.md for more information on usage.
 
 ## More info
 - [Teloxide](https://github.com/teloxide/teloxide/)
