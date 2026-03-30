@@ -1,4 +1,4 @@
-option('enable_cargo_build', type: 'boolean', value: true)
+option('cargo_home', type: 'string', value: '')
 
 option(
   'profile',

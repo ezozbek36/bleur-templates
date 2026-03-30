@@ -1,8 +1,10 @@
+# TODO: after releasing meson 1.11 migrate into rust workspace. See for more info: https://mesonbuild.com/Rust.html#cargo-interaction
+
 project(
   '#project-name#',
   'rust',
   version: '0.1.0',
-  meson_version: '>= 0.59',
+  meson_version: '>= 1',
   # FIXME Set the project license
   # license: 'MIT',
 )
@@ -59,7 +61,12 @@ else
   rust_target = 'release'
 endif
 
-cargo_home = meson.project_build_root() / 'cargo-home'
+cargo_home = get_option('cargo_home')
+
+if cargo_home == ''
+  cargo_home = meson.project_build_root() / 'cargo-home'
+endif
+
 cargo_target = meson.project_build_root() / 'cargo-target'
 
 cargo_env = environment()

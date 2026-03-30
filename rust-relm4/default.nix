@@ -63,9 +63,9 @@ in
     nativeBuildInputs = commonNativeBuildInputs;
     buildInputs = commonBuildInputs;
 
-    mesonFlags = [
-        "-Denable_cargo_build=false"
-    ];
+    preConfigure = ''
+      mesonFlagsArray+=("-Dcargo_home=$CARGO_HOME")
+    '';
 
     configurePhase = ''
       mesonConfigurePhase
