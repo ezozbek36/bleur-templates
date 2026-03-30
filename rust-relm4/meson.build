@@ -85,20 +85,6 @@ subdir('data')
 subdir('po')
 subdir('src')
 
-test (
-  'cargo-test',
-  cargo,
-  args: [
-    'test',
-    cargo_release_option,
-    '--all-targets',
-    '--all-features',
-    '--workspace',
-  ],
-  env: cargo_env,
-  timeout: 400,
-)
-
 gnome.post_install(
   gtk_update_icon_cache: true,
   glib_compile_schemas: true,

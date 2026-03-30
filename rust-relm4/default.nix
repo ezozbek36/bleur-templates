@@ -10,10 +10,6 @@
   crane,
   ...
 }: let
-  # Helpful nix function
-  lib = pkgs.lib;
-  getLibFolder = pkg: "${pkg}/lib";
-
   # Manifest via Cargo.toml
   manifest = (pkgs.lib.importTOML ./Cargo.toml).package;
 
@@ -39,6 +35,7 @@
     polkit
     wrapGAppsHook4
     openssl
+    libxml2
   ];
 
   cargoArtifacts = craneLib.buildDepsOnly {
@@ -50,7 +47,6 @@
   };
 in
   craneLib.buildPackage {
-    # pkgs.stdenv.mkDerivation {
     pname = manifest.name;
     version = manifest.version;
     strictDeps = true;
@@ -66,6 +62,10 @@ in
 
     nativeBuildInputs = commonNativeBuildInputs;
     buildInputs = commonBuildInputs;
+
+    mesonFlags = [
+        "-Denable_cargo_build=false"
+    ];
 
     configurePhase = ''
       mesonConfigurePhase

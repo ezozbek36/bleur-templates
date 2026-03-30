@@ -1,3 +1,5 @@
+option('enable_cargo_build', type: 'boolean', value: true)
+
 option(
   'profile',
   type: 'combo',
@@ -8,3 +10,4 @@ option(
   value: 'default',
   description: 'The build profile for GTK Rust Template. One of "default" or "development".'
 )
+
